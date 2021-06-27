@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja" style="height:100%">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Mustache Template Sample</title>
+    <script type="module" src="script.js"></script>
+    <style type="text/css">
+      .flexC { display:flex; flex-direction:column; }
+      h1 { font-size: 14pt; margin-bottom:0; }
+      h2 { font-size: 12pt; margin: 0; margin-top:10px }
+      textarea { flex-grow:1 }
+      #error { color:red; font-weight:normal }
+      input[type="file"] {display:none}
+    </style>
+  </head>
+  <body style="height:100%;margin:0">
+    <div style="height:calc(100% - 20px);padding:10px" class="flexC">
+      <h1>Mustacheテンプレートの動作サンプル</h1>
+      <div>
+      </div>
+      <div style="flex-grow:1;" class="flexC">
+        <h2>Mustache Template <input type="file" id="fileTemplate" accept=".mustache,.ms,.txt"></h2>
+        <textarea id="template"></textarea>
+      </div>
+      <div style="flex-grow:1;" class="flexC">
+        <h2>Data (JSON) <input type="file" id="fileData" accept=".json,.js"></h2>
+        <textarea id="data"></textarea>
+      </div>
+      <div style="flex-grow:1;" class="flexC">
+        <h2>Rendering Result <span id="error"></span></h2>
+        <textarea readOnly id="result"></textarea>
+      </div>
+    </div>
+  </body>
+</html>
